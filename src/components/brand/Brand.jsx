@@ -3,7 +3,12 @@ import './brand.css';
 
 const Brand = () => {
   return (
-    <div>Brand</div>
+    <div className='accpick__brand'>
+      <div className="accpick__brand-container">
+        <h1>Accpick</h1>
+      </div>
+
+    </div>
   )
 }
 
