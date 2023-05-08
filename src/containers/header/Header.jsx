@@ -19,6 +19,7 @@ const Header = () => {
         <div className='accpick__header-content__compatible'>
           <img src={windows} alt="windows10 compatible" />
           <p>Will ACCPICK fit for your business</p>
+          <p><a href="#">Try Us</a></p>
         </div>
       </div>
       <div className='accpick__header-image'>
