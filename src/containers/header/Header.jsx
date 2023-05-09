@@ -1,7 +1,7 @@
 import React from 'react';
 import './header.css';
 import windows from '../../assets/windows10.png';
-import ai from '../../assets/ai.png';
+import accpick from '../../assets/pos.jpg';
 
 const Header = () => {
   return (
@@ -23,7 +23,7 @@ const Header = () => {
         </div>
       </div>
       <div className='accpick__header-image'>
-          <img src={ai} alt='AI' />
+          <img src={accpick} alt='AI' />
         </div>
     </div>
   )

@@ -6,10 +6,10 @@ import './navbar.css';
 const Menu = () => (
   <>
     <p><a href='#home'>Home</a></p>
-    <p><a href='#accpick'>What is Accpick</a></p>
+    <p><a href='#accpickpos'>What is Accpick</a></p>
     <p><a href='#possibility'>Services</a></p>
     <p><a href='#features'>Support</a></p>
-    <p><a href='#'>Shops</a></p>
+    <p><a href='#shops'>Shops</a></p>
   </>
 )
 
