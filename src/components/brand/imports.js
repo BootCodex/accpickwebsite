@@ -1,14 +1,14 @@
-import google from '../../assets/google.png';
-import slack from '../../assets/slack.png';
-import atlassian from '../../assets/atlassian.png';
+import hiq from '../../assets/hiq.jpg';
+import sqp from '../../assets/sqp.jpg';
+import silver from '../../assets/silver.jpg';
 import dropbox from '../../assets/dropbox.png';
 import shopify from '../../assets/shopify.png';
 
 
 export {
-    google,
-    slack,
-    atlassian,
+    hiq,
+    sqp,
+    silver,
     dropbox,
     shopify
 }

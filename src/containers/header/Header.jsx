@@ -1,7 +1,7 @@
 import React from 'react';
 import './header.css';
 import windows from '../../assets/windows10.png';
-import accpick from '../../assets/pos.jpg';
+import accpick from '../../assets/menu.png';
 
 const Header = () => {
   return (

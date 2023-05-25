@@ -15,3 +15,6 @@
     justify-content: center;
     align-items: center;
 }
+.accpick__brand div img {
+    width: 150px;
+}

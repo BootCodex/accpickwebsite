@@ -1,20 +1,20 @@
 import React from 'react';
 import './brand.css';
-import { google, slack, atlassian, dropbox, shopify } from './imports';
+import { hiq, sqp, silver, dropbox, shopify } from './imports';
 
 const Brand = () => {
   return (
     <div className='accpick__brand section__padding' id='shops'>
       <div>
-        <img src={google} alt="google" />
+        <img src={hiq} alt="google" />
       </div>
 
       <div>
-        <img src={slack} alt="slack" />
+        <img src={sqp} alt="slack" />
       </div>
 
       <div>
-        <img src={atlassian} alt="atlassian" />
+        <img src={silver} alt="atlassian" />
       </div>
       
       <div>
