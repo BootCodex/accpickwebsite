@@ -49,7 +49,7 @@
 .accpick__navbar-menu_container button {
     padding: 0.5rem 1rem;
     color: #fff;
-    background: #ff4820;
+    background: red;
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 18px;

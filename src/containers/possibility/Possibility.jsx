@@ -1,5 +1,5 @@
 import React from 'react';
-import possibilityImage from '../../assets/addons.png';
+import possibilityImage from '../../assets/addons-r1.png';
 import './possibility.css';
 
 const Possibility = () => {

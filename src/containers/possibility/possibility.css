@@ -33,7 +33,7 @@
     line-height: 30px;
 
 
-    color: #71E5FF;
+    color: #000;
 }
 
 .accpick__possibility-content h4:last-child {
@@ -44,7 +44,7 @@
     line-height: 30px;
 
 
-    color: #FF8A71;
+    color: red;
 }
 
 .accpick__possibility-content h1 {

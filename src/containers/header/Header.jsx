@@ -1,7 +1,7 @@
 import React from 'react';
 import './header.css';
 import windows from '../../assets/windows10.png';
-import accpick from '../../assets/menu-r.png';
+import accpick from '../../assets/main-menu.png';
 
 const Header = () => {
   return (
@@ -19,12 +19,12 @@ const Header = () => {
         <div className='accpick__header-content__compatible'>
           <img src={windows} alt="windows10 compatible" />
           <p>Will ACCPICK fit for your business</p>
-          <p><a href="#">Try Us</a></p>
+          <p><a href="#home">Try Us</a></p>
         </div>
       </div>
       <div className='accpick__header-image'>
           <img src={accpick} alt='AI' />
-        </div>
+      </div>
     </div>
   )
 }

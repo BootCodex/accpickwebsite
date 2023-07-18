@@ -14,7 +14,7 @@ const AccpickPos = () => {
           marketing management information, in line with GAAP" />
       </div>
       <div className='accpick__accpickpos-heading'>
-        <h1 className='gradient__text'>The possibilities are beyond your imagination</h1>
+        <h1 className='color-subtext_black'>The Possibilities Are Beyond Your Imagination</h1>
         <p>Explore The Library</p>
       </div>
       <div className='accpick__accpickpos-container'>

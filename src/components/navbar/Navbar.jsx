@@ -19,7 +19,7 @@ const Navbar = () => {
     <div className='accpick__navbar'>
       <div className='accpick__navbar-links'>
         <div className='accpick__navbar-links_logo'>
-          <img src={logo} alt='Accpick' />
+          <a href="#home"><img src={logo} alt='Accpick' /></a>
         </div>
         <div className='accpick__navbar-links_container'>
           <Menu />
