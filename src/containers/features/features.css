@@ -27,10 +27,9 @@
 .accpick__features-heading p {
     font-family: var(--font-family);
     font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
+    font-weight: 700;
+        font-size: 40px;
     line-height: 30px;
-    color: #FF8A71;
     margin-top: 2rem;
 }
 

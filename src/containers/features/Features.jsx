@@ -4,29 +4,30 @@ import { Feature } from '../../components';
 
 const featuresData = [
   {
-    title: 'Improving end distrusts instantly',
-    text: 'Led ask possible mistress relation elegance eat likewise debating. By message or am nothing amongst chiefly address.'
+    title: 'Call +27 33-343-6000',
+    text: 'A real Human attendant will answer the call and log support ticket.'
   },
   {
-    title: 'Become the tended active',
-    text: 'Led ask possible mistress relation elegance eat likewise debating. By message or am nothing amongst chiefly address.'
+    title: 'Accpick Engineer',
+    text: 'Will phone you at Accpick`s cost he or she will request connection with your permission to connect, they will fix the issue.'
   },
   {
-    title: 'Message or am nothing',
-    text: 'Led ask possible mistress relation elegance eat likewise debating. By message or am nothing amongst chiefly address.'
+    title: 'Use WhatsApp +27 76-9188-228',
+    text: 'To give our support team access to your computer to assist you we use whatsapp to send TeamViewer ID and Password  .'
   },
   {
-    title: 'Really boy law county',
-    text: 'Led ask possible mistress relation elegance eat likewise debating. By message or am nothing amongst chiefly address.'
+    title: 'TeamViewer',
+    text: 'Download and install TeamViewer version 10 and above on your computer for us to easily access your computer anywhere you are.'
   },
 ]
 
 const Features = () => {
+  const teamViewer = 'https://www.teamviewer.com/en-us/download/windows/'
   return (
     <div className='accpick__features section__padding' id='features'>
         <div className="accpick__features-heading">
         <h1 className='gradient__text'>The Future is Now and You Just Need To Realize it. Step into Future Today & Make it Happen</h1>
-        <p>Request Early Access to Get Started</p>
+        <p className='gradient__text'><a href={teamViewer} target='_blank'>TeamViewer</a></p>
         </div>
         <div className="accpick__features-container">
             {featuresData.map((item, index) => (

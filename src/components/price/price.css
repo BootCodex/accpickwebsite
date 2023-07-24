@@ -1,0 +1,16 @@
+.accpick__price {
+    display: flex;
+}
+
+.box {
+    flex: 1;
+    height: 200px;
+    margin: 10px;
+    background-color: #f0f0f0;
+}
+
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column;
+    }
+}
