@@ -2,6 +2,16 @@ import React, { useState } from 'react';
 import './price.css';
 
 function Price() {
+
+  const handleButtonClick = () => {
+    const subject = encodeURIComponent('Your default email subject');
+    const to = encodeURIComponent('admin@accpick.co.za', 'tech2@accpick.co.za');
+    const mailtoLink = `mailto:${to}?subject=${subject}`;
+
+    // Open the default email client
+    window.location.assign(mailtoLink);
+  };
+
   const [pricing] = useState([
     {
       title: 'Bronze',
@@ -29,7 +39,7 @@ function Price() {
           
       support: ['Call Center Limited', 'WhatsApp'],
       equipmentSupport: 'Extensive equipment support',
-      operatingSystem: ['Windows,XP,7,8,10', 'Virtual Box'],
+      operatingSystem: ['Windows,7,8,10', 'Virtual Box'],
     },
     {
       title: 'Silver',
@@ -56,7 +66,7 @@ function Price() {
                 ],
       support: ['Call Center Limited', 'WhatsApp'],
       equipmentSupport: 'Extensive equipment support',
-      operatingSystem: ['Windows,XP,7,8,10', 'Virtual Box'],
+      operatingSystem: ['Windows,7,8,10', 'Virtual Box'],
     },
     {
       title: 'Gold',
@@ -92,7 +102,7 @@ function Price() {
                 ],
       support: ['Call Center Limited', 'WhatsApp'],
       equipmentSupport: 'Extensive equipment support',
-      operatingSystem: ['Windows,XP,7,8,10', 'Virtual Box'],
+      operatingSystem: ['Windows7,8,10', 'Virtual Box'],
     },
   ]);
 
@@ -104,11 +114,11 @@ function Price() {
             <h3>{tier.title}</h3>
           </div>
           <div className='accpick__price-price'>
-            <h4>{`${tier.price} = ${tier.currency}${tier.amount}`}</h4>
+            {/* <h4>{`${tier.price} = ${tier.currency}${tier.amount}`}</h4> */}
           </div>
           <div className='accpick__price-des'>
             
-            <p>{tier.description}</p>
+            <p className='price_description'>{tier.description}</p>
             <ul>
               {tier.features.map((feature, idx) => (
                 <li key={idx}>{feature}</li>
@@ -119,9 +129,9 @@ function Price() {
                   <li key={idx}>{supportItem}</li>
                 ))}
             </ul>
-            <p><strong>Equipment Support:</strong> {tier.equipmentSupport}</p>
+            {/* <p><strong>Equipment Support:</strong> {tier.equipmentSupport}</p> */}
             <p><strong>Operating System:</strong> {tier.operatingSystem}</p>
-            <button type='button'>Sign Up</button>
+            <button type='button' className='get-quote-btn' onClick={handleButtonClick}>Get a Quote</button>
           </div>
         </div>
       ))}
