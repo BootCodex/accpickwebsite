@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import logo from '../../assets/accpicklogo.png';
 import './navbar.css';
+import ContactForm from '../contactForm/ContactForm';
 
 const Menu = () => (
   <>
@@ -9,12 +10,18 @@ const Menu = () => (
     <p><a href='#accpickpos'>What is Accpick</a></p>
     <p><a href='#possibility'>Services</a></p>
     <p><a href='#features'>Support</a></p>
+    <p><a href='#price'>Price</a></p>
     <p><a href='#shops'>Shops</a></p>
   </>
 )
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const [showContactForm, setShowContactForm] = useState(false);
+
+  const toggleContactForm = () => {
+    setShowContactForm(!showContactForm);
+  };
   return (
     <div className='accpick__navbar'>
       <div className='accpick__navbar-links'>
@@ -25,9 +32,13 @@ const Navbar = () => {
           <Menu />
         </div>
       </div>
-      <div className='accpick__navbar-sign'>
-        <p>Try Us</p>
-        <button type='button'>Contact Us</button>
+      <div className='accpick__navbar-sign'>        
+        <button type='button' onClick={toggleContactForm}>Contact Us</button>
+        {showContactForm && (
+          <div className="accpick__navbar-menu_container scale-up-center">
+            <ContactForm />
+          </div>
+        )};
       </div>
       <div className='accpick__navbar-menu'>
         {toggleMenu
@@ -38,16 +49,21 @@ const Navbar = () => {
           <div className='accpick__navbar-menu_container scale-up-center'>
             <div className='accpick__navbar-menu_container-links'>
               <Menu /> 
-              <div className='accpick__navbar-menu_container-links-sign'>
-                <p>Try Us</p>
-                <button type='button'>Contact Us</button>
+              <div className='accpick__navbar-menu_container-links-sign'>                
+                <button type='button' onClick={toggleContactForm}>Contact U</button>
               </div>             
             </div>
           </div>
-        )}
+        )};
+
+        {showContactForm && (
+          <div className="accpick__navbar-menu_container scale-up-center">
+            <ContactForm />
+          </div>
+        )};
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Navbar

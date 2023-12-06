@@ -54,13 +54,22 @@
 .accpick__accpickpos-heading p {
     font-family: var(--font-family);
     font-weight: 500;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 30px;
+    border: 2px solid #1bd4e1ff;
+        border-radius: 5px;
+        padding: 5px;
 
     color: var(--color-subtext_black);
     cursor: pointer;
 }
 
+.accpick__accpickpos-heading p:hover {
+    border: none;
+    background-color: #1bd4e1ff;
+    color: black;
+    padding: 5px;
+}
 .accpick__accpickpos-container {
     display: flex;
     flex-wrap: wrap;

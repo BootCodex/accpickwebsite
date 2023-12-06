@@ -3,6 +3,7 @@ import './footer.css';
 import accpickLogo from '../../assets/accpicklogo.png';
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <div className='accpick__footer section__padding'>
         <div className="accpick__footer-heading">
@@ -38,7 +39,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="accpick__footer-copyright">
-          <p>© 2021 AccpickPoS. All rights reserved.</p>
+          <p>&copy; {currentYear} AccpickPoS. All rights reserved.</p>
         </div>
     </div>
   )

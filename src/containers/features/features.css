@@ -28,9 +28,10 @@
     font-family: var(--font-family);
     font-style: normal;
     font-weight: 700;
-        font-size: 40px;
+        font-size: 20px;
     line-height: 30px;
     margin-top: 2rem;
+    color: blue;
 }
 
 .accpick__features-container {

@@ -27,7 +27,7 @@ const Features = () => {
     <div className='accpick__features section__padding' id='features'>
         <div className="accpick__features-heading">
         <h1 className='gradient__text'>The Future is Now and You Just Need To Realize it. Step into Future Today & Make it Happen</h1>
-        <p className='gradient__text'><a href={teamViewer} target='_blank'>TeamViewer</a></p>
+        <p><a href={teamViewer} target='_blank'>Download TeamViewer Here</a></p>
         </div>
         <div className="accpick__features-container">
             {featuresData.map((item, index) => (

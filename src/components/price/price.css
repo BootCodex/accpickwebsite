@@ -1,16 +1,83 @@
 .accpick__price {
     display: flex;
+    justify-content: center;
+        font-family: var(--font-family)
 }
 
 .box {
-    flex: 1;
-    height: 200px;
-    margin: 10px;
-    background-color: #f0f0f0;
+    flex-basis: 33.33% - 20px;
+    background-color: antiquewhite;
+        border: 1px solid #000;
+        text-align: center;
+
+        align-items: center;
+        margin: 2px;
+    }
+    
+    .box ul {
+        list-style: none;
+        padding: 0;
+        font-family: var(--font-family)
+    }
+    
+    .accpick__price-headbronze {
+        background-color: #cd7f32;
+        color: #fff;
+        padding: 10px;
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    
+    .accpick__price-headsilver {
+        background-color: #c0c0c0;
+        color: #fff;
+        padding: 10px;
+        font-size: 25px;
+    }
+    
+    .accpick__price-headgold {
+        background-color: #ffd700;
+        color: #fff;
+        padding: 10px;
+        font-size: 20px;
 }
 
-@media (max-width: 767px) {
-    .container {
+.accpick__price button,
+.accpick__navbar-menu_container button {
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background: red;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.accpick__price-price {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+.accpick__price-des {
+    line-height: 1.5;
+}
+@media screen and (max-width: 767px) {
+    .accpick__price {
         flex-direction: column;
+        margin-bottom: 50px;
+    }
+
+    .box {
+        margin: 0;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+
+    .accpick__price-des {
+        font-size: 18px;
+        line-height: 1.8;
     }
 }

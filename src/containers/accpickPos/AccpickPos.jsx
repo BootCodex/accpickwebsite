@@ -1,5 +1,6 @@
 import React from 'react';
 import { Feature } from '../../components';
+import accpickDocs from '../../assets/AccpickDocs/Accpick-detailed-list.pdf';
 import './accpickpos.css';
 
 const AccpickPos = () => {
@@ -15,15 +16,17 @@ const AccpickPos = () => {
       </div>
       <div className='accpick__accpickpos-heading'>
         <h1 className='color-subtext_black'>The Possibilities Are Beyond Your Imagination</h1>
-        <p>Explore The Library</p>
+        <p className='accpick__accpickpos-explore'><a href={accpickDocs} target='_blank' rel='noopener noreferrer'>Explore Accpick</a></p>
       </div>
       <div className='accpick__accpickpos-container'>
         <Feature title="OverView" text="An overview of how accpick is simple, user friendly and ease to Learn " />
         <Feature title="Accpick Knowledge Base" text="will assist you in gaining experience,
         using a variety of solutions that automate manual and time consuming in day to day business.        
         From Accounting, to Reporting, and more, we offer all you need." />
-        <Feature title="Education" text="At jointure ladyship an insisted so humanity he. 
-        Friendly bachelor entrance to on by. As put impossible own apartments b" />
+        <Feature title="Accpick Basics " text="AccpickPos  is based on a graphical representation of icons that
+         enable efficient navigation through the program and the manual. 
+         Both the program and the manual are also subdivided into modules – each module representing 
+         a specific accounting procedure" />
       </div>
     </div>
   )
