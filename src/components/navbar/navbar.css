@@ -105,11 +105,19 @@
     .accpick__navbar-menu {
         display: flex;
     }
+
+    .click {
+        display: none;
+    }
 }
 
 @media screen and (max-width:700px) {
     .accpick__navbar {
         padding: 2rem 4rem;
+    }
+
+    .click {
+        display: none;
     }
 
 }
@@ -128,6 +136,10 @@
     }
 
     .accpick__navbar-menu_container-links-sign {
+        display: block;
+    }
+
+    .click {
         display: block;
     }
 }
