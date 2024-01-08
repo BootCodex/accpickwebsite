@@ -6,6 +6,7 @@ function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
     user_email: '',
+    phone_number: '',
     message: '',
   });
 
@@ -36,6 +37,17 @@ function ContactForm() {
     }
   };
 
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
+
+  //   emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+  //     .then((result) => {
+  //         console.log(result.text);
+  //     }, (error) => {
+  //         console.log(error.text);
+  //     });
+  // };
+
   const validateForm = (data) => {
     let errors = {};
     if (!data.name.trim()) {
@@ -45,6 +57,9 @@ function ContactForm() {
       errors.user_email = 'Email is required';
     } else if (!/\S+@\S+\.\S+/.test(data.user_email)) {
       errors.user_email = 'Invalid email address';
+    }
+    if (!data.phone_number.trim()) {
+      errors.phone_number = 'Phone Number is required'
     }
     if (!data.message.trim()) {
       errors.message = 'Message is required';
@@ -74,6 +89,15 @@ function ContactForm() {
           onChange={handleChange}
         />
         {errors.user_email && <span className="error">{errors.user_email}</span>}
+
+        <label>Phone Number</label>
+        <input
+          type="text"
+          name='phone_number'
+          value={formData.phone_number}
+          onChange={handleChange}
+        />
+        {errors.phone_number && <span className="error">{errors.phone_number}</span>}
 
         <label>Message</label>
         <textarea

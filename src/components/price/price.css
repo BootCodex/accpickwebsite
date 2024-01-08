@@ -20,6 +20,11 @@
         padding: 0;
         font-family: var(--font-family)
     }
+
+    .price_description {
+        font-size: 18px;
+        font-weight: bold;
+    }
     
     .accpick__price-headbronze {
         background: var(--gradient-bar);
@@ -72,6 +77,7 @@
     border: 0;
     outline: none;
     cursor: pointer;
+    margin-top: 1rem;
 }
 
 .accpick__price-price {
