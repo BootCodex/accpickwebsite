@@ -22,7 +22,7 @@ const featuresData = [
 ]
 
 const Features = () => {
-  const teamViewer = 'https://www.teamviewer.com/en-us/download/windows/'
+  const teamViewer = process.env.REACT_APP_TEAM_VIEWER_LINK;
   return (
     <div className='accpick__features section__padding' id='features'>
         <div className="accpick__features-heading">

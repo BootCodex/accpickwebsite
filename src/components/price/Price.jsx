@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import './price.css';
 
 function Price() {
+  
 
   const handleButtonClick = () => {
     const subject = encodeURIComponent('Your default email subject');
-    const to = encodeURIComponent('admin@accpick.co.za', 'tech2@accpick.co.za');
+    const to = encodeURIComponent('admin@accpick.co.za');
     const mailtoLink = `mailto:${to}?subject=${subject}`;
 
     // Open the default email client

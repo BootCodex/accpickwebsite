@@ -4,13 +4,24 @@ import accpickLogo from '../../assets/accpicklogo.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
+  const handleButtonClick = () => {
+    const subject = encodeURIComponent('Your default email subject');
+    const to = encodeURIComponent('admin@accpick.co.za');
+    const mailtoLink = `mailto:${to}?subject=${subject}`;
+
+    // Open the default email client
+    window.location.assign(mailtoLink);
+  };
+
+
   return (
     <div className='accpick__footer section__padding'>
         <div className="accpick__footer-heading">
           <h1 className='gradient__text'>Do you want to step in to the future before others</h1>
         </div>
         <div className="accpick__footer-btn">
-          <p>Request Early Access</p>
+          <p><a href="#form" onClick={handleButtonClick}>Request Early Access</a></p>
         </div>
         <div className="accpick__footer-links">
           <div className="accpick__footer-links_logo">

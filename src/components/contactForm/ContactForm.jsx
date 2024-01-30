@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './contactForm.css';
 
 
 function ContactForm() {
+  const form = useRef();
   const [formData, setFormData] = useState({
     name: '',
     user_email: '',
@@ -10,7 +12,9 @@ function ContactForm() {
     message: '',
   });
 
+  
   const [errors, setErrors] = useState({});
+  const [submissionStatus, setSubmissionStatus] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,29 +28,47 @@ function ContactForm() {
     });
   };
 
+
+  const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+  const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+  const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Perform validation before submitting the form
     const newErrors = validateForm(formData);
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
+      setSubmissionStatus('error');
+      
     } else {
       // Form is valid, you can submit the form data
       console.log('Form submitted:', formData);
       // Add your form submission logic here
+      emailjs.sendForm(serviceId, templateId, form.current, publicKey)
+      .then((result) => {
+          console.log("message sent");
+          setSubmissionStatus('success');
+          
+          // Reset the form after successful submission
+          form.current.reset();
+          setFormData({
+            name: '',
+            user_email: '',
+            phone_number: '',
+            message: '',
+          });
+          // clear any previous validation errors
+          setErrors({});
+      }, (error) => {
+          console.log(error.text);
+          setSubmissionStatus('error');
+           
+      });
     }
   };
 
-  // const sendEmail = (e) => {
-  //   e.preventDefault();
-
-  //   emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
-  //     .then((result) => {
-  //         console.log(result.text);
-  //     }, (error) => {
-  //         console.log(error.text);
-  //     });
-  // };
 
   const validateForm = (data) => {
     let errors = {};
@@ -68,10 +90,18 @@ function ContactForm() {
   };
 
   return (
-    <div className='contact-form'>
-      <h2>Contact Us</h2>
+    <div className='contact-form' id='form'>
+      {/* Conditional rendering based on submission status */}
+      {submissionStatus === 'success' && (
+        <div className="success-message">Form submitted successfully!</div>
+      )}
+      {submissionStatus === 'error' && (
+        <div className="error-message">Oops! Something went wrong. Please try again later.</div>
+      )}
 
-      <form onSubmit={handleSubmit}>
+      <h2>Contact Us</h2>
+      
+      <form ref={form} onSubmit={handleSubmit}>
         <label>Name</label>
         <input
           type="text"

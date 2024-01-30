@@ -1,7 +1,7 @@
 import React from 'react';
 import './blog.css';
 import { Article } from '../../components';
-import { blog01, blog02, blog03, blog04, blog05, blog06, blog07, blog08, pointOfSale, cashBook, pOrders, debtors, Creditors, GL, Utilities, StockC, } from './imports';
+import { blog01, blog02, blog03, blog04, blog05, pointOfSale, cashBook, debtors, Creditors, StockC, } from './imports';
 
 
 const Blog = () => {
