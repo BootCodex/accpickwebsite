@@ -61,6 +61,11 @@
     flex-direction: column;
 }
 
+.icon {
+    color: #fff;
+    font-size: 28px;
+}
+
 .accpick__footer-links_logo {
     display: flex;
     flex-direction: column;

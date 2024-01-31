@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaFacebook, FaYoutube } from 'react-icons/fa'
 import './footer.css';
 import accpickLogo from '../../assets/accpicklogo.png';
 
@@ -25,28 +26,23 @@ const Footer = () => {
         </div>
         <div className="accpick__footer-links">
           <div className="accpick__footer-links_logo">
-            <img src={accpickLogo} alt="logo" />
-            <p>8 Bense Road </p>
+            <a href="#home"><img src={accpickLogo} alt="logo"  /></a>
+            <p></p>
           </div>
           <div className="accpick__footer-links_div">
-            <h4>Links</h4>
-            <p>Overons</p>
-            <p>Social Media</p>
-            <p>Counters</p>
-            <p>Contact</p>
+            <h4>Social Media</h4>
+            <a href="https://www.facebook.com/mcmillan.gatsi" target="_blank" rel="noopener noreferrer"><FaFacebook className='icon' /></a>
+            <a href="https://www.youtube.com/channel/UCZSbE7-Or9RATumYjepX9Vg/videos" target="_blank" rel="noopener noreferrer"><FaYoutube className='icon'/></a>
           </div>
           <div className="accpick__footer-links_div">
             <h4>Company</h4>
             <p>Terms & Conditions</p>
             <p>Privacy Policy</p>
-            <p>Contact</p>
           </div>
           <div className="accpick__footer-links_div">
             <h4>Get in touch</h4>
-            <p>Overons</p>
-            <p>8 Bense Road</p>
-            <p>066008932</p>
-            <p>codecodexboot@gmail.com</p>
+            <p>033 343 6000</p>
+            <p>admin@accpick.co.za</p>
           </div>
         </div>
         <div className="accpick__footer-copyright">
