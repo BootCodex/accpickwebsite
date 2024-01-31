@@ -1,30 +1,36 @@
 import React from 'react';
 import './brand.css';
-import { hiq, sqp, silver, dropbox, shopify } from './imports';
+import { tyre, battery, exhaust, lpg, radiator } from './imports';
 
 const Brand = () => {
   return (
-    <div className='accpick__brand section__padding' id='shops'>
+    <div className='accpick_user section__padding' id='shops'>
+      <div className='accpick__brand section__padding' >
       <div>
-        <img src={hiq} alt="google" />
+        
+        <img src={tyre} alt="tyre" />
+        
       </div>
 
       <div>
-        <img src={sqp} alt="slack" />
+        <img src={battery} alt="slack" />
       </div>
 
       <div>
-        <img src={silver} alt="atlassian" />
+        <img src={exhaust} alt="atlassian" />
       </div>
       
       <div>
-        <img src={dropbox} alt="dropbox" />
+        <img src={lpg} alt="dropbox" />
       </div>
       
       <div>
-        <img src={shopify} alt="shopify" />
+        <img src={radiator} alt="shopify" />
       </div>
-
+      
+    </div>
+    <p>Used by Tyre Shops, Exhaust, Parts, Spares, Petrol Station, LPG Gas, Radiators, Venter Trailers, Hotels, <br />
+    Veterinary wholesalers, Hardware, Spares, Liquor, Electronics, Engineering, Manufacturing, Paint Coatings and many more!!</p>
     </div>
   )
 }

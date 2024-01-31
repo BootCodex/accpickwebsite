@@ -7,11 +7,11 @@ import ContactForm from '../contactForm/ContactForm';
 const Menu = () => (
   <>
     <p><a href='#home'>Home</a></p>
-    <p><a href='#accpickpos'>What is Accpick</a></p>
-    <p><a href='#possibility'>Services</a></p>
-    <p><a href='#features'>Support</a></p>
+    <p><a href='#accpickpos'>Accpick</a></p>
+    <p><a href='#features'>Support</a></p> 
     <p><a href='#price'>Price</a></p>
-    <p><a href='#shops'>Shops</a></p>
+    <p><a href='#possibility'>Features</a></p>       
+    <p><a href='#shops'>Used By</a></p>
   </>
 )
 
@@ -24,9 +24,9 @@ const Navbar = () => {
     setToggleMenu(false); // Close menu when opening contact form
   };
 
-  const closeMenu = () => {
-    setToggleMenu(false);
-  };
+  // const closeMenu = () => {
+  //   setToggleMenu(false);
+  // };
 
   useEffect(() => {
     const handleClickOutside = (event) => {

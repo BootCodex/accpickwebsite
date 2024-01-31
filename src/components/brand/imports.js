@@ -1,14 +1,14 @@
-import hiq from '../../assets/hiq.jpg';
-import sqp from '../../assets/sqp.jpg';
-import silver from '../../assets/silver.jpg';
-import dropbox from '../../assets/dropbox.png';
-import shopify from '../../assets/shopify.png';
+import tyre from '../../assets/images/users/tyre.png';
+import battery from '../../assets/images/users/battery.png';
+import  exhaust from '../../assets/images/users/exhaust.png';
+import lpg from '../../assets/images/users/lpg.png';
+import radiator from '../../assets/images/users/radiator.png';
 
 
 export {
-    hiq,
-    sqp,
-    silver,
-    dropbox,
-    shopify
+    tyre,
+    battery,
+    exhaust,
+    lpg,
+    radiator
 }
