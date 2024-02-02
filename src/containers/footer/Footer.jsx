@@ -2,6 +2,7 @@ import React from 'react';
 import { FaFacebook, FaYoutube } from 'react-icons/fa'
 import './footer.css';
 import accpickLogo from '../../assets/accpicklogo.png';
+import Terms from '../../assets/AccpickDocs/TERMS AND CONDITIONS.pdf'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -36,8 +37,7 @@ const Footer = () => {
           </div>
           <div className="accpick__footer-links_div">
             <h4>Company</h4>
-            <p>Terms & Conditions</p>
-            <p>Privacy Policy</p>
+            <p className='terms'><a href={Terms}  target='_blank' rel='noopener noreferrer'>Terms & Conditions</a></p>
           </div>
           <div className="accpick__footer-links_div">
             <h4>Get in touch</h4>

@@ -124,6 +124,11 @@
     color: #fff;
 }
 
+.terms a:hover {
+    font-size: 1.5em;
+    transition: ease-in;
+}
+
 @media screen and (max-width: 850px) {
     .accpick__footer-heading h1 {
         font-size: 44px;
